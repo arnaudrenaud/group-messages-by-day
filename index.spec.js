@@ -1,4 +1,4 @@
-const { groupMessagesByDay } = require('.');
+const { getDaysWithMessages } = require('.');
 
 const messages = [
   { id: 1, date: '2020-04-29T07:17:43.489Z', content: 'Hello' },
@@ -26,8 +26,8 @@ const daysWithMessages = [
   },
 ];
 
-describe('groupMessagesByDay', () => {
+describe('getDaysWithMessages', () => {
   it('returns messages grouped by day', () => {
-    expect(groupMessagesByDay(messages)).toEqual(daysWithMessages);
+    expect(getDaysWithMessages(messages)).toEqual(daysWithMessages);
   });
 });
